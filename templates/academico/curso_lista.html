@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Cursos - Universidad{% endblock %}
+{% block content %}
+<h1>Cursos</h1>
+<ul class="lista">
+    {% for c in cursos %}
+    <li class="card">
+        <a href="{% url 'curso_detalle' c.pk %}">{{ c.nombre }}</a>
+        <div class="meta">{{ c.codigo }} · {{ c.programa.nombre }} · {{ c.creditos }} créditos</div>
+    </li>
+    {% empty %}
+    <li class="card">No hay cursos registrados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

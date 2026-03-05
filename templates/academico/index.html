@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Inicio - Universidad{% endblock %}
+{% block content %}
+<h1>Información académica</h1>
+<p>Explora programas, cursos y estudiantes de la universidad.</p>
+<ul class="lista">
+    <li><a href="{% url 'programa_lista' %}">Ver programas</a></li>
+    <li><a href="{% url 'curso_lista' %}">Ver cursos</a></li>
+    <li><a href="{% url 'estudiante_lista' %}">Ver estudiantes</a></li>
+</ul>
+{% endblock %}

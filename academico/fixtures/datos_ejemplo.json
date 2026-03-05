@@ -1,0 +1,124 @@
+[
+  {
+    "model": "academico.programa",
+    "pk": 1,
+    "fields": {
+      "nombre": "Ingeniería de Sistemas",
+      "codigo": "IS",
+      "descripcion": "Programa de ingeniería en desarrollo de software y sistemas.",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.programa",
+    "pk": 2,
+    "fields": {
+      "nombre": "Administración de Empresas",
+      "codigo": "ADE",
+      "descripcion": "Programa en gestión empresarial.",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.curso",
+    "pk": 1,
+    "fields": {
+      "programa": 1,
+      "nombre": "Programación I",
+      "codigo": "PROG1",
+      "creditos": 3,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.curso",
+    "pk": 2,
+    "fields": {
+      "programa": 1,
+      "nombre": "Bases de Datos",
+      "codigo": "BD",
+      "creditos": 4,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.curso",
+    "pk": 3,
+    "fields": {
+      "programa": 2,
+      "nombre": "Contabilidad General",
+      "codigo": "CONT",
+      "creditos": 3,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 1,
+    "fields": {
+      "nombre": "María",
+      "apellido": "García",
+      "codigo": "E001",
+      "email": "maria.garcia@universidad.edu",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 2,
+    "fields": {
+      "nombre": "Carlos",
+      "apellido": "López",
+      "codigo": "E002",
+      "email": "carlos.lopez@universidad.edu",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 3,
+    "fields": {
+      "nombre": "Ana",
+      "apellido": "Martínez",
+      "codigo": "E003",
+      "email": "ana.martinez@universidad.edu",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "academico.inscripcion",
+    "pk": 1,
+    "fields": {
+      "estudiante": 1,
+      "curso": 1,
+      "fecha_inscripcion": "2025-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "academico.inscripcion",
+    "pk": 2,
+    "fields": {
+      "estudiante": 1,
+      "curso": 2,
+      "fecha_inscripcion": "2025-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "academico.inscripcion",
+    "pk": 3,
+    "fields": {
+      "estudiante": 2,
+      "curso": 1,
+      "fecha_inscripcion": "2025-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "academico.inscripcion",
+    "pk": 4,
+    "fields": {
+      "estudiante": 3,
+      "curso": 3,
+      "fecha_inscripcion": "2025-02-01T10:00:00Z"
+    }
+  }
+]

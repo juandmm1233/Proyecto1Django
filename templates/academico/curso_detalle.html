@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ curso.nombre }} - Universidad{% endblock %}
+{% block content %}
+<h1>{{ curso.nombre }}</h1>
+<div class="meta">Código: {{ curso.codigo }} · Programa: <a href="{% url 'programa_detalle' curso.programa_id %}">{{ curso.programa.nombre }}</a> · {{ curso.creditos }} créditos</div>
+<h2>Estudiantes inscritos</h2>
+<ul class="lista">
+    {% for ins in inscripciones %}
+    <li class="card">
+        <a href="{% url 'estudiante_detalle' ins.estudiante_id %}">{{ ins.estudiante.apellido }}, {{ ins.estudiante.nombre }}</a>
+        <div class="meta">{{ ins.estudiante.codigo }}</div>
+    </li>
+    {% empty %}
+    <li class="card">Ningún estudiante inscrito en este curso.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

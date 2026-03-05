@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Estudiantes - Universidad{% endblock %}
+{% block content %}
+<h1>Estudiantes</h1>
+<ul class="lista">
+    {% for e in estudiantes %}
+    <li class="card">
+        <a href="{% url 'estudiante_detalle' e.pk %}">{{ e.apellido }}, {{ e.nombre }}</a>
+        <div class="meta">{{ e.codigo }}{% if e.email %} · {{ e.email }}{% endif %}</div>
+    </li>
+    {% empty %}
+    <li class="card">No hay estudiantes registrados.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
