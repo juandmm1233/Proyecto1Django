@@ -69,6 +69,17 @@ El **navbar** incluye enlaces a Programas, Cursos y Estudiantes.
 - **Estudiante**: nombre, apellido, código, email.
 - **Inscripcion**: estudiante (FK), curso (FK), fecha_inscripcion; `unique_together` (estudiante, curso).
 
+## Subir a GitHub
+
+```bash
+git add .
+git commit -m "App académica: programas, cursos, estudiantes e inscripciones"
+# Crear un repositorio nuevo en GitHub y luego:
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+git branch -M main
+git push -u origin main
+```
+
 ## Licencia
 
 Uso educativo.
