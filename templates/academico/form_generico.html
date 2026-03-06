@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ titulo }} - Universidad{% endblock %}
+{% block content %}
+<h1>{{ titulo }}</h1>
+<form method="post" class="form-card">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+        <button type="submit" class="btn">Guardar</button>
+        <a href="javascript:history.back()" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+{% endblock %}

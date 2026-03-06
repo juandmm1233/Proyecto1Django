@@ -2,6 +2,7 @@
 {% block title %}Programas - Universidad{% endblock %}
 {% block content %}
 <h1>Programas</h1>
+<p class="mb-1"><a href="{% url 'programa_crear' %}" class="btn">+ Nuevo programa</a></p>
 <ul class="lista">
     {% for p in programas %}
     <li class="card">

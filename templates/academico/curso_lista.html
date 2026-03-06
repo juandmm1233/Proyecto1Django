@@ -2,6 +2,7 @@
 {% block title %}Cursos - Universidad{% endblock %}
 {% block content %}
 <h1>Cursos</h1>
+<p class="mb-1"><a href="{% url 'curso_crear' %}" class="btn">+ Nuevo curso</a></p>
 <ul class="lista">
     {% for c in cursos %}
     <li class="card">

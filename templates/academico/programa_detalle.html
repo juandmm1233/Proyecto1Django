@@ -5,6 +5,7 @@
 <div class="meta">Código: {{ programa.codigo }}</div>
 {% if programa.descripcion %}<p>{{ programa.descripcion }}</p>{% endif %}
 <h2>Cursos del programa</h2>
+<p class="mb-1"><a href="{% url 'curso_crear' %}?programa={{ programa.pk }}" class="btn">+ Nuevo curso en este programa</a></p>
 <ul class="lista">
     {% for c in programa.cursos.all %}
     <li class="card">
