@@ -1,0 +1,224 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',system-ui,sans-serif;
+background:#ecf0f8;
+color:#222;
+}
+
+
+/* NAVBAR */
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+background:#1a365d;
+
+padding:14px 0;
+
+position:sticky;
+top:0;
+z-index:1000;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+}
+
+
+/* CONTENEDOR */
+
+.nav-container{
+
+max-width:1100px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 20px;
+
+}
+
+
+/* LOGO AREA */
+
+.logo-area{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+width:80px;
+height:80px;
+
+object-fit:contain;
+
+background:white;
+
+padding:4px;
+
+border-radius:6px;
+
+}
+
+
+/* TEXTO UNIVERSIDAD */
+
+.brand{
+
+font-size:20px;
+font-weight:700;
+color:white;
+text-decoration:none;
+
+}
+
+
+/* LINKS MENU */
+
+.nav-links{
+
+display:flex;
+gap:20px;
+
+}
+
+
+/* LINKS */
+
+.nav-links a{
+
+color:#e2e8f0;
+
+text-decoration:none;
+
+font-weight:500;
+
+padding:6px 12px;
+
+border-radius:6px;
+
+transition:0.25s;
+
+}
+
+
+.nav-links a:hover{
+
+background:#2c5282;
+
+color:white;
+
+}
+
+
+/* CONTENIDO GENERAL */
+
+main{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:40px 20px;
+
+}
+
+
+/* TITULOS */
+
+h1{
+
+margin-bottom:20px;
+
+color:#1a365d;
+
+}
+
+
+/* TARJETAS */
+
+.card{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+transition:0.25s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+/* LINKS */
+
+.card a{
+
+color:#2563eb;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+.card a:hover{
+
+text-decoration:underline;
+
+}
+
+
+/* LISTAS */
+
+ul.lista{
+
+list-style:none;
+
+padding:0;
+
+}
+
+
+ul.lista li{
+
+margin-bottom:8px;
+
+}

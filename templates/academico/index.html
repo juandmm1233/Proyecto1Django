@@ -1,11 +1,107 @@
 {% extends "base.html" %}
-{% block title %}Inicio - Universidad{% endblock %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Información académica</h1>
-<p>Explora programas, cursos y estudiantes de la universidad.</p>
-<ul class="lista">
-    <li><a href="{% url 'programa_lista' %}">Ver programas</a></li>
-    <li><a href="{% url 'curso_lista' %}">Ver cursos</a></li>
-    <li><a href="{% url 'estudiante_lista' %}">Ver estudiantes</a></li>
-</ul>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Educación Universitaria</h1>
+
+<p>
+Sistema académico para gestionar programas,
+cursos y estudiantes de la universidad.
+</p>
+
+<div class="hero-buttons">
+
+<a href="{% url 'programa_lista' %}" class="btn-primary">
+Ver Programas
+</a>
+
+<a href="{% url 'curso_lista' %}" class="btn-outline">
+Ver Cursos
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cards">
+
+<div class="card">
+<h2>Programas</h2>
+<p>Consulta todos los programas académicos.</p>
+<a href="{% url 'programa_lista' %}">Explorar</a>
+</div>
+
+<div class="card">
+<h2>Cursos</h2>
+<p>Explora los cursos disponibles.</p>
+<a href="{% url 'curso_lista' %}">Explorar</a>
+</div>
+
+<div class="card">
+<h2>Estudiantes</h2>
+<p>Visualiza los estudiantes inscritos.</p>
+<a href="{% url 'estudiante_lista' %}">Explorar</a>
+</div>
+
+</section>
+
+
+<!-- SECCIÓN INSTITUCIONAL -->
+
+<section class="info-universidad">
+
+<div class="info-container">
+
+<h2>Sobre la Universidad</h2>
+
+<p class="info-descripcion">
+Nuestra plataforma académica permite gestionar programas,
+cursos y estudiantes de forma organizada y eficiente,
+facilitando el acceso a la información académica.
+</p>
+
+<div class="info-grid">
+
+<div class="info-item">
+<h3>Misión</h3>
+<p>
+Formar profesionales íntegros mediante educación de calidad
+y fomentar la investigación académica.
+</p>
+</div>
+
+<div class="info-item">
+<h3>Visión</h3>
+<p>
+Ser una institución reconocida por su excelencia académica
+y su compromiso con la innovación educativa.
+</p>
+</div>
+
+<div class="info-item">
+<h3>Contacto</h3>
+<p>
+Email: info@universidad.edu<br>
+Tel: +57 300 000 0000
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 {% endblock %}

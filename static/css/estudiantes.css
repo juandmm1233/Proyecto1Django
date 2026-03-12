@@ -1,0 +1,212 @@
+/* HEADER */
+
+.page-header{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+
+/* GRID ESTUDIANTES */
+
+.estudiantes-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:25px;
+
+}
+
+
+
+/* TARJETA */
+
+.estudiante-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
+}
+
+.estudiante-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 12px 28px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* AVATAR */
+
+.avatar img{
+
+width:70px;
+
+height:70px;
+
+margin-bottom:15px;
+
+opacity:0.85;
+
+}
+
+
+
+/* PERFIL */
+
+.estudiante-perfil{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.avatar-grande img{
+
+width:90px;
+
+height:90px;
+
+}
+
+
+
+/* META */
+
+.meta{
+
+color:#555;
+
+margin-top:5px;
+
+}
+
+
+
+/* BOTON */
+
+.estudiante-card a{
+
+display:inline-block;
+
+margin-top:12px;
+
+color:#2563eb;
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+/* GRID CURSOS DEL ESTUDIANTE */
+
+.cursos-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+
+}
+
+
+/* TARJETA CURSO */
+
+.curso-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 6px 16px rgba(0,0,0,0.1);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+transition:0.25s;
+
+}
+
+.curso-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+/* INFO CURSO */
+
+.curso-info h3{
+
+color:#1a365d;
+
+margin-bottom:5px;
+
+}
+
+.curso-meta{
+
+color:#555;
+
+font-size:14px;
+
+}
+
+
+/* BOTON VER CURSO */
+
+.btn-curso{
+
+background:#2563eb;
+
+color:white;
+
+padding:8px 14px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.25s;
+
+}
+
+.btn-curso:hover{
+
+background:#1d4ed8;
+
+}

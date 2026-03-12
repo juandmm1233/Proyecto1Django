@@ -1,15 +1,52 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}Programas - Universidad{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/programas.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Programas</h1>
-<ul class="lista">
-    {% for p in programas %}
-    <li class="card">
-        <a href="{% url 'programa_detalle' p.pk %}">{{ p.nombre }}</a>
-        <div class="meta">{{ p.codigo }}</div>
-    </li>
-    {% empty %}
-    <li class="card">No hay programas registrados.</li>
-    {% endfor %}
-</ul>
+
+<section class="page-header">
+
+<h1>Programas Académicos</h1>
+
+<p>
+Explora los diferentes programas universitarios disponibles
+en nuestra institución.
+</p>
+
+</section>
+
+
+<section class="programas-grid">
+
+{% for p in programas %}
+
+<div class="programa-card">
+
+<h2>{{ p.nombre }}</h2>
+
+<div class="codigo">
+Código: {{ p.codigo }}
+</div>
+
+<a href="{% url 'programa_detalle' p.pk %}" class="btn-ver">
+Ver programa
+</a>
+
+</div>
+
+{% empty %}
+
+<div class="empty">
+No hay programas registrados.
+</div>
+
+{% endfor %}
+
+</section>
+
 {% endblock %}

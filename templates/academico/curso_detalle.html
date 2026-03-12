@@ -1,17 +1,74 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}{{ curso.nombre }} - Universidad{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cursos.css' %}">
+{% endblock %}
+
 {% block content %}
+
+<section class="curso-header-card">
+
 <h1>{{ curso.nombre }}</h1>
-<div class="meta">Código: {{ curso.codigo }} · Programa: <a href="{% url 'programa_detalle' curso.programa_id %}">{{ curso.programa.nombre }}</a> · {{ curso.creditos }} créditos</div>
+
+<div class="curso-info-grid">
+
+<div class="info-box">
+<span class="label">Código</span>
+<span class="value">{{ curso.codigo }}</span>
+</div>
+
+<div class="info-box">
+<span class="label">Programa</span>
+<span class="value">
+<a href="{% url 'programa_detalle' curso.programa_id %}">
+{{ curso.programa.nombre }}
+</a>
+</span>
+</div>
+
+<div class="info-box">
+<span class="label">Créditos</span>
+<span class="value">{{ curso.creditos }}</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="estudiantes-section">
+
 <h2>Estudiantes inscritos</h2>
-<ul class="lista">
-    {% for ins in inscripciones %}
-    <li class="card">
-        <a href="{% url 'estudiante_detalle' ins.estudiante_id %}">{{ ins.estudiante.apellido }}, {{ ins.estudiante.nombre }}</a>
-        <div class="meta">{{ ins.estudiante.codigo }}</div>
-    </li>
-    {% empty %}
-    <li class="card">Ningún estudiante inscrito en este curso.</li>
-    {% endfor %}
-</ul>
+
+<div class="estudiantes-grid">
+
+{% for ins in inscripciones %}
+
+<div class="estudiante-card">
+
+<h3>{{ ins.estudiante.apellido }}, {{ ins.estudiante.nombre }}</h3>
+
+<div class="codigo">
+{{ ins.estudiante.codigo }}
+</div>
+
+<a href="{% url 'estudiante_detalle' ins.estudiante_id %}">
+Ver estudiante
+</a>
+
+</div>
+
+{% empty %}
+
+<p>No hay estudiantes inscritos en este curso.</p>
+
+{% endfor %}
+
+</div>
+
+</section>
+
 {% endblock %}

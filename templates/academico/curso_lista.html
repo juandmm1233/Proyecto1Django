@@ -1,15 +1,58 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}Cursos - Universidad{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/cursos.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Cursos</h1>
-<ul class="lista">
-    {% for c in cursos %}
-    <li class="card">
-        <a href="{% url 'curso_detalle' c.pk %}">{{ c.nombre }}</a>
-        <div class="meta">{{ c.codigo }} · {{ c.programa.nombre }} · {{ c.creditos }} créditos</div>
-    </li>
-    {% empty %}
-    <li class="card">No hay cursos registrados.</li>
-    {% endfor %}
-</ul>
+
+<section class="page-header">
+
+<h1>Cursos Universitarios</h1>
+
+<p>
+Consulta todos los cursos disponibles en los diferentes
+programas académicos.
+</p>
+
+</section>
+
+
+<section class="cursos-grid">
+
+{% for c in cursos %}
+
+<div class="curso-card">
+
+<h2>{{ c.nombre }}</h2>
+
+<div class="curso-info">
+
+<span><b>Código:</b> {{ c.codigo }}</span>
+
+<span><b>Programa:</b> {{ c.programa.nombre }}</span>
+
+<span><b>Créditos:</b> {{ c.creditos }}</span>
+
+</div>
+
+<a href="{% url 'curso_detalle' c.pk %}" class="btn-curso">
+Ver curso
+</a>
+
+</div>
+
+{% empty %}
+
+<div class="empty">
+No hay cursos registrados.
+</div>
+
+{% endfor %}
+
+</section>
+
 {% endblock %}

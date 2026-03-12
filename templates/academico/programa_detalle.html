@@ -1,18 +1,61 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block title %}{{ programa.nombre }} - Universidad{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/programas.css' %}">
+{% endblock %}
+
 {% block content %}
+
+<section class="programa-header">
+
 <h1>{{ programa.nombre }}</h1>
-<div class="meta">Código: {{ programa.codigo }}</div>
-{% if programa.descripcion %}<p>{{ programa.descripcion }}</p>{% endif %}
+
+<div class="programa-meta">
+<span><strong>Código:</strong> {{ programa.codigo }}</span>
+</div>
+
+{% if programa.descripcion %}
+<p class="programa-descripcion">
+{{ programa.descripcion }}
+</p>
+{% endif %}
+
+</section>
+
+
+<section class="cursos-programa">
+
 <h2>Cursos del programa</h2>
-<ul class="lista">
-    {% for c in programa.cursos.all %}
-    <li class="card">
-        <a href="{% url 'curso_detalle' c.pk %}">{{ c.nombre }}</a>
-        <div class="meta">{{ c.codigo }} · {{ c.creditos }} créditos</div>
-    </li>
-    {% empty %}
-    <li class="card">No hay cursos en este programa.</li>
-    {% endfor %}
-</ul>
+
+<div class="cursos-grid">
+
+{% for c in programa.cursos.all %}
+
+<div class="curso-card">
+
+<h3>{{ c.nombre }}</h3>
+
+<div class="meta">
+{{ c.codigo }} · {{ c.creditos }} créditos
+</div>
+
+<a href="{% url 'curso_detalle' c.pk %}" class="btn-curso">
+Ver curso
+</a>
+
+</div>
+
+{% empty %}
+
+<p>No hay cursos en este programa.</p>
+
+{% endfor %}
+
+</div>
+
+</section>
+
 {% endblock %}
