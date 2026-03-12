@@ -83,3 +83,29 @@ git push -u origin main
 ## Licencia
 
 Uso educativo.
+
+Aportes de Kevin Julian Guerrero Penagos
+
+Kevin se encargó de:
+
+Diseño y estilo (CSS):
+
+Creó todos los archivos CSS dentro de static/css/ para cada sección del proyecto: programas.css, cursos.css, estudiantes.css, index.css, base.css.
+
+Mejoró la apariencia visual de la página, incluyendo colores, tipografía, márgenes y diseño responsivo.
+
+Añadió imágenes y elementos visuales en static/img/ para enriquecer la interfaz (logo, hero, avatar de usuario).
+
+Panel de administración (superusuario):
+
+Configuró un superusuario para Django (admin) para permitir la gestión de Programas, Cursos y Estudiantes de manera fácil.
+
+Esto facilita crear, editar y eliminar registros sin necesidad de modificar directamente la base de datos.
+
+Mejoras en la experiencia de usuario:
+
+Ajustó las plantillas HTML (templates/academico/) para que reflejen correctamente los estilos y sean más intuitivas.
+
+Implementó un flujo más claro en la navegación mediante el navbar y botones de acción visibles.
+
+Gracias a estos aportes, la aplicación no solo funciona correctamente sino que también tiene una interfaz más atractiva y fácil de usar para la gestión académica.
